@@ -43,22 +43,8 @@ export default function Appointment(props) {
       .catch(() => transition(ERROR_SAVE, true));
   }
 
-  /******* DELETE FUNCTION ********/
-
-  function deleteAppt() {
-    transition(DELETING, true);
-    props
-      .deleteInterview(props.id)
-      .then(() => {
-        transition(EMPTY, true);
-      })
-      .catch(() => transition(ERROR_DELETE, true));
-  }
-
-  /********************************/
-
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
@@ -80,9 +66,15 @@ export default function Appointment(props) {
       {mode === DELETING && <Status message="Deleting.." />}
       {mode === CONFIRM && (
         <Confirm
-          onConfirm={deleteAppt}
-          onCancel={() => back()}
-          message={" *WARNING* Are you Sure?"}
+          onCancel={() => transition(SHOW)}
+          onConfirm={() => {
+            transition(DELETING);
+            props
+              .deleteInterview(props.id)
+              .then(() => transition(EMPTY))
+              .catch(error => transition(ERROR_DELETE, true));
+          }}
+          message={"Are you sure you would like to delete?"}
         />
       )}
 
