@@ -39,7 +39,7 @@ Above animation shows how to save appointment, after the user clicks on the '+' 
 
 ##
 
-!["Animation to show how to edit appointment"](docs/save-appointment.gif)
+!["Animation to show how to edit appointment"](docs/edit-appointment.gif)
 Above animation shows how to edit the appointment.Once the appointment is booked, if a user decides to edit the appointment (Change the student name or change the interviewer) then user clicks on the edit icon and updates the details and click on 'Save' to save the new details.
 
 ##
