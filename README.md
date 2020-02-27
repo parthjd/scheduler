@@ -21,3 +21,13 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Final product
+
+!["Screenshot of the Home Page"](docs/home-page.png)
+This is the home page. User can see select the day and time to book the appointment.
+
+##
+
+!["Animation to show how to book appointment"](docs/book-appointment.gif)
+Above animation shows, user clicks on the '+' button to book the appointment.
