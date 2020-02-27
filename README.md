@@ -24,7 +24,7 @@ npm run storybook
 
 ## Final product
 
-!["Screenshot of the Home Page"](docs/home-page.png)
+!["Screenshot of the Home Page"](docs/homepage.png)
 This is the home page. User can see select the day and time to book the appointment.
 
 ##
