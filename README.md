@@ -30,4 +30,5 @@ This is the home page. User can see select the day and time to book the appointm
 ##
 
 !["Animation to show how to book appointment"](docs/book-appointment.gif)
+
 Above animation shows, user clicks on the '+' button to book the appointment.
